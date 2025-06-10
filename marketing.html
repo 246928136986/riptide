@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: white;
+        }
+        html {
+            background-color: #242424;
+            padding: 30px;
+            padding-top: 10px;
+            height: 100vh;
+            padding-bottom: 20px;
+        }
+        button {
+            color: black;
+            font-size: 20px;
+            margin-bottom: 15px;
+            margin-right: 5px;
+        }
+        h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        .divider {
+            width: calc(100vw - 80px);
+            height: 2px;
+            background-color: #525252;
+            margin-bottom: 15px;
+            border: none;
+        }
+        .frame {
+            width: calc(100vw - 130px);
+            max-height: calc(100vh - 300px);
+            border: 2px solid #525252;
+            background-color: #242424;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        b {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        p {
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%; text-align: right; display: flex; position: relative;">
+        <h1 style="text-align: left; font-size: 70px;">riptide</h1>
+        <b id="splash" style="font-weight: 700; font-size: 15px; color: #525252; width: 100%; bottom: 0; position: absolute;  transform: translate(-15px, -15px);">ever heard of securly?</b>
+    </div>
+    <div class="divider"></div>
+    <button id="fresh">about riptide</button>
+    <button id="fun">get riptide</button>
+    <button id="pictures">contact</button>
+    <div class="divider"></div>
+    <div class="frame" id="frame" style="overflow: scroll;">
+        <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">what is riptide?</h1>
+        <p><br>riptide is a multipurpose website designed to cure your boredom at school. it has game/proxy site links, movies, exploits, and more.<br>
+            <br>say goodbye to needing to beg people to airdrop game sites to you, or needing to use random google doc lists of old sites. riptide always has the newest links, with semi-daily updates including multiple new ones per day. as soon as you've got riptide, getting access to new games, movies, and more is just a few clicks away.<br><br>
+           and are you tired of slow, bloat-filled proxy sites? try electron. electron is a fast, minimalistic proxy site developed by riptide, and all of it's links are available exclusively on riptide.<br><br>
+            
+            on top of all that, it's stored within a single, portable html file to make it hard to block, and to give you the ability to access riptide through static links, bookmarklets, webviews, data links, and more, all powered by a live-updating jsdelivr cdn.
+        <br><br><br>tl;dr: get riptide, it rules.
+        </p>
+        <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;"><br>how do i get riptide?</h1>
+        <p><br>go to the 'get riptide' page, you blithering blockhead</p>
+        <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;"><br>more faq &#8595;</h1>
+
+        <h2 style="margin-bottom: 0px; font-size: 20px; margin-top: 0px;"><br>is the code public?</h2>
+        <p><br>as long as you can find the github repo ;) good luck, skid</p>
+
+        <h2 style="margin-bottom: 0px; font-size: 20px; margin-top: 0px;"><br>are you the same guy that made cesium and nova?</h2>
+        <p><br>we can neither confirm nor deny such allegations at this time.</p>
+
+        <h2 style="margin-bottom: 0px; font-size: 20px; margin-top: 0px;"><br>is it legal?</h2>
+        <p><br>yesn't</p>
+
+        <h2 style="margin-bottom: 0px; font-size: 20px; margin-top: 0px;"><br>how do i get riptide?</h2>
+        <p><br>can you read?</p>
+
+        <h2 style="margin-bottom: 0px; font-size: 20px; margin-top: 0px;"><br>should i report this to the school?</h2>
+        <p><br>step 1: find a cliff<br>step 2: jump from it</p>
+
+    </div>
+    <script>
+
+        document.getElementById("fun").onclick = function() {pageUpdateFun()};
+        function pageUpdateFun() {
+            document.getElementById("frame").innerHTML = `
+            <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">fun sites & stuff</h1>
+            <p>this is a collection of random fun or interesting sites to cure boredom.<br>if something is blocked, just copy the link & use a proxy</p>
+            <p>
+                <a href="https://timelineofearth.com/">timeline of earth</a> - a timeline of everything that has happened since earth was created<br>
+                <a href="https://permadi.com/java/spaint/spaint.html">kalaeidascope painter</a> - draw fun shapes & stuff<br>
+                <a href="https://pagetutor.com/trillion/index.html">what a trillion dollars looks like</a> - very self explanitory<br>
+                <a href="https://stephaneginier.com/sculptgl/">sculptGL</a> - sculpt 3d sculptures in your browser<br>
+                <a href="https://pudding.cool/2018/10/city_3d/">human population map</a> - see human population distribution<br>
+                <a href="https://www.onezoom.org/life/">tree of all life</a> - see how every living thing on earth evolved<br>
+                <a href="https://mynoise.net/">mynoise</a> - make custom relaxing/whitenoise soundscapes<br>
+                <a href="https://gridland.doublespeakgames.com/">gridland</a> - simple match-3 game about survival<br>
+                <a href="https://www.bitlisten.com/">bitlisten</a> - listen to live bitcoin transactions<br>
+                <a href="https://www.bouncingdvdlogo.com/">bouncing dvd logo</a> - wait for it...<br>
+                <a href="https://www.pcjs.org/">retro pc os emulator</a> - emulate old pc operating systems and games like msdos or w3d<br>
+                <a href="https://ikeamuseum.com/">ikea museum</a> - explore the history of ikea and look at their old catalogs<br>
+                <a href="https://madebyevan.com/webgl-water/">water sim</a> - play around with a water simulation<br>
+                <a href="https://www.martin-laxenaire.fr/experiments/8000ers/">world's tallest mountains</a> - see the 12 tallest mountains in 3d<br>
+                <a href="https://www.mathsnacks.com/game-over-gopher/index.html">game over gopher</a> - the real OGs know what this one is<br>
+                <a href="https://uselessfacts.net/">useless facts</a> - a bunch of facts that are completely useless<br>
+                <a href="https://www.virtualdrumming.com/drums/online-virtual-games/online-virtual-games-drums.html">virtual drums</a> - play the drumset<br>
+                <a href="https://quickdraw.withgoogle.com/">google quickdraw</a> - once again, the OGs know this one<br>
+                <a href="https://chaz.fun/phone/3250/">3D nokia phone</a> - interact with a fully functional old nokia phone in 3D<br>
+                <a href="https://lab.nationalmedals.org/gravity.php">gravity sim</a> - play around with gravity and orbits in space<br>
+                <a href="https://year-progress.cnln.dev/">year progress</a> - see the progress of the year compared to other random stuff<br>
+                <a href="https://www.globetime.app/">globetime</a> - see the time around the world with a 3D globe<br>
+                <a href="https://monkeys.zip/">monkeys.zip</a> - ever heard of the Infinite Monkey Theorem?<br>
+                <a href="https://wordnerd.co/">wordnerd</a> - a bunch of fun daily word games<br>
+
+
+
+
+                
+                
+                
+                
+                
+                
+                
+                
+            </p>
+            `;
+        }
+        document.getElementById("fresh").onclick = function() {pageUpdateFresh()};
+        function pageUpdateFresh() {
+            document.getElementById("frame").innerHTML = `
+            <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">today's fresh batch</h1>
+            <p>
+                these are the freshest proxy/game site links, delivered daily(ish). most of these links are for electron, a custom proxy that is exclusively available on riptide.<br><br>
+                <ul style="list-style-type:disc;">
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                </ul>
+            </p>
+            `;
+        }
+        document.getElementById("pictures").onclick = function() {pageUpdatePictures()};
+        function pageUpdatePictures() {
+            document.getElementById("frame").innerHTML = `
+            <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">moving pictures</h1>
+            <p>
+                movies, shows, anime, or whatever else. yes, these are "legal" (legal info and disclaimers are at the bottom of the page)
+                <br><br><h3>movies</h3><br>the following are 
+            </p>
+            `;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: white;
+        }
+        html {
+            background-color: #242424;
+            padding: 30px;
+            padding-top: 10px;
+            height: 100vh;
+            padding-bottom: 20px;
+        }
+        button {
+            color: black;
+            font-size: 20px;
+            margin-bottom: 15px;
+            margin-right: 5px;
+        }
+        h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+        .divider {
+            width: calc(100vw - 80px);
+            height: 2px;
+            background-color: #525252;
+            margin-bottom: 15px;
+            border: none;
+        }
+        .frame {
+            width: calc(100vw - 130px);
+            min-height: calc(100vh - 300px);
+            border: 2px solid #525252;
+            background-color: #242424;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        b {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        p {
+            margin-top: 0px;
+        }
+        button {
+            border: 2px solid #525252;
+            border-radius: 10px;
+            background-color: #242424;
+            padding: 2px;
+            padding-left: 6px;
+            padding-right: 6px;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 100%; text-align: right; display: flex; position: relative;">
+        <h1 style="text-align: left;">riptide</h1>
+        <b id="splash" style="font-weight: 700; font-size: 15px; color: #525252; width: 100%; bottom: 0; position: absolute;  transform: translate(-15px, -15px);">riptide v1.0.0 LTS - your riptide instance is up to date</b>
+    </div>
+    <div class="divider"></div>
+    <button id="fresh">today's fresh batch</button>
+    <button id="fun">fun sites</button>
+    <button id="pictures">ye olde moving pictures</button>
+    <button id="chatroom">chatroom</button>
+    <button id="tools">tools & exploits</button>
+    <button id="misc">miscellaneous</button>
+    <button id="links">the archives</button>
+    <div class="divider"></div>
+    <div class="frame" id="frame">
+        <p>riptide is a multipurpose website designed to cure your boredom at school.
+            <br><br>
+            it's stored within a single, portable html file to make it hard to block.
+            <br><br><br><br>
+            it's divided up into 8 pages, as follows:
+            <br><br><br>
+            <b>home: </b>the page you're on right now :)
+            <br><br>
+            <b>today's fresh batch: </b>the semi-daily batch of fresh, juicy proxy/game site links
+            <br><br>
+            <b>fun sites: </b>a bunch of fun, random sites & games to cure boredom
+            <br><br>
+            <b>moving pictures: </b>movies, shows, anime, etc. no sign-ups, no payment, questional legality. you're welcome, people
+            <br><br>
+            <b>chatroom: </b>it's just a chatroom. chat with others on the site
+            <br><br>
+            <b>tools & exploits: </b>a bunch of different useful sites, tools, exploits, etc
+            <br><br>
+            <b>miscellaneous: </b>all the random crap that doesn't deserve its own page (credits, forms, updates, etc)
+            <br><br>
+            <b>the archives: </b>a full archive of all the old links if you're really so aversed to just using the fresh ones 
+        </p>
+    </div>
+    <script>
+        document.getElementById("links").onclick = function() {pageUpdateLinks()};
+        function pageUpdateLinks() {
+            document.getElementById("frame").innerHTML = `
+            <p>stuff idk</p>
+            `;
+        }
+        document.getElementById("fun").onclick = function() {pageUpdateFun()};
+        function pageUpdateFun() {
+            document.getElementById("frame").innerHTML = `
+            <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">fun sites & stuff</h1>
+            <p>this is a collection of random fun or interesting sites to cure boredom.<br>if something is blocked, just copy the link & use a proxy</p>
+            <p>
+                <a href="https://timelineofearth.com/">timeline of earth</a> - a timeline of everything that has happened since earth was created<br>
+                <a href="https://permadi.com/java/spaint/spaint.html">kalaeidascope painter</a> - draw fun shapes & stuff<br>
+                <a href="https://pagetutor.com/trillion/index.html">what a trillion dollars looks like</a> - very self explanitory<br>
+                <a href="https://stephaneginier.com/sculptgl/">sculptGL</a> - sculpt 3d sculptures in your browser<br>
+                <a href="https://pudding.cool/2018/10/city_3d/">human population map</a> - see human population distribution<br>
+                <a href="https://www.onezoom.org/life/">tree of all life</a> - see how every living thing on earth evolved<br>
+                <a href="https://mynoise.net/">mynoise</a> - make custom relaxing/whitenoise soundscapes<br>
+                <a href="https://gridland.doublespeakgames.com/">gridland</a> - simple match-3 game about survival<br>
+                <a href="https://www.bitlisten.com/">bitlisten</a> - listen to live bitcoin transactions<br>
+                <a href="https://www.bouncingdvdlogo.com/">bouncing dvd logo</a> - wait for it...<br>
+                <a href="https://www.pcjs.org/">retro pc os emulator</a> - emulate old pc operating systems and games like msdos or w3d<br>
+                <a href="https://ikeamuseum.com/">ikea museum</a> - explore the history of ikea and look at their old catalogs<br>
+                <a href="https://madebyevan.com/webgl-water/">water sim</a> - play around with a water simulation<br>
+                <a href="https://www.martin-laxenaire.fr/experiments/8000ers/">world's tallest mountains</a> - see the 12 tallest mountains in 3d<br>
+                <a href="https://www.mathsnacks.com/game-over-gopher/index.html">game over gopher</a> - the real OGs know what this one is<br>
+                <a href="https://uselessfacts.net/">useless facts</a> - a bunch of facts that are completely useless<br>
+                <a href="https://www.virtualdrumming.com/drums/online-virtual-games/online-virtual-games-drums.html">virtual drums</a> - play the drumset<br>
+                <a href="https://quickdraw.withgoogle.com/">google quickdraw</a> - once again, the OGs know this one<br>
+                <a href="https://chaz.fun/phone/3250/">3D nokia phone</a> - interact with a fully functional old nokia phone in 3D<br>
+                <a href="https://lab.nationalmedals.org/gravity.php">gravity sim</a> - play around with gravity and orbits in space<br>
+                <a href="https://year-progress.cnln.dev/">year progress</a> - see the progress of the year compared to other random stuff<br>
+                <a href="https://www.globetime.app/">globetime</a> - see the time around the world with a 3D globe<br>
+                <a href="https://monkeys.zip/">monkeys.zip</a> - ever heard of the Infinite Monkey Theorem?<br>
+                <a href="https://wordnerd.co/">wordnerd</a> - a bunch of fun daily word games<br>
+
+
+
+
+                
+                
+                
+                
+                
+                
+                
+                
+            </p>
+            `;
+        }
+        document.getElementById("fresh").onclick = function() {pageUpdateFresh()};
+        function pageUpdateFresh() {
+            document.getElementById("frame").innerHTML = `
+            <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">today's fresh batch</h1>
+            <p>
+                these are the freshest proxy/game site links, delivered daily(ish). most of these links are for electron, a custom proxy that is exclusively available on riptide.<br><br>
+                <ul style="list-style-type:disc;">
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                    <li>a</li>
+                </ul>
+            </p>
+            `;
+        }
+        document.getElementById("pictures").onclick = function() {pageUpdatePictures()};
+        function pageUpdatePictures() {
+            document.getElementById("frame").innerHTML = `
+            <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">moving pictures</h1>
+            <p>
+                movies, shows, anime, or whatever else. yes, these are "legal" (legal info and disclaimers are at the bottom of the page)
+                <br><br><h3>movies</h3><br>the following are 
+            </p>
+            `;
+        }
+        document.getElementById("chatroom").onclick = function() {pageUpdateChatroom()};
+        function pageUpdateChatroom() {
+            document.getElementById("frame").innerHTML = `
+            <iframe src="https://hack.chat/?riptide710358172409" style="width: calc(100vw - 130px); min-height: calc(100vh - 300px); border: none;"></iframe>
+            `;
+        }
+
+        document.getElementById("tools").onclick = function() {pageUpdateTools()};
+        function pageUpdateTools() {
+            document.getElementById("frame").innerHTML = `
+            <p>tolls?!!?!?!?</p>
+            `;
+        }
+        document.getElementById("misc").onclick = function() {pageUpdateMisc()};
+        function pageUpdateMisc() {
+            document.getElementById("frame").innerHTML = `
+            <p>random shi</p>
+            `;
+        }
+    </script>
+      <script>
+
+        // Array of random strings
+
+        const randomStrings = [
+            "cure your boredom",
+            "it's gluten-free",
+            "contains javascript",
+            "as seen on tv",
+            "sponsored by nordvpn",
+            "sir this is a wendy's",
+            "i need coffee",
+            "sudo rm -rf /*",
+            "dQw4w9WgXcQ",
+            "batteries not included",
+            "water is not wet",
+            "powered by hamsters",
+            "are you a robot?",
+            "when life gives you lemons",
+            "it's over 9000",
+            "get the hell outta dodge!",
+            "funyuns are good",
+            "probably legal",
+            "duolingo knows your address",
+            "is your refrigerator running?",
+            "¡umop-apisdn",
+            "lorem ipsum dolor sit amet",
+            "we put the 'fun' in funeral",
+            "not pirated (probably)",
+            "35.7040744, 139.5577317",
+            "insert joke here",
+            "splash text",
+            "do you even know nova?",
+            "no ads!",
+            "roadwork ahead",
+            "i coulda dropped my croissant",
+            "thanks for checking in, i'm still a piece of garbage!",
+            "i've never been to oovoo javer",
+            "¿Puedes hacerme un sándwich?",
+            "ladies and gentlemen, we got em",
+            "the powerhouse of the cell!",
+            "customize and save with liberty mutual",
+            "where is my supersuit?",
+            "the real OGs remember UBG Hub",
+            "the real OGS remember nova",
+            "the real OGs remember cesium",
+            "yes, the splash text was copied from nova",
+            "don't get caught in a riptide",
+            "a handshake is available upon request.",
+            "mysterious and important!",
+            "hi there, you on the table",
+            "the music dance experience is officially cancelled.",
+            "what's for dinner?",
+            "see you at the equator",
+            "hello internet, welcome to riptide theory!",
+            "but hey, that's just a theory. a riptide theory!",
+            "make life take the lemons back!",
+            "i'm the man who's gonna burn your house down with a lemon!",
+            "hello everyone, this is your daily dose of riptide",
+            "in springfield, they're eating the dogs and eating the cats",
+            "and now, the nations of the world, brought to you by yakko warner!",
+            "take me to the soviet union!",
+            "created by bill cipher",
+            "egassem sdrawkcab",
+            "'i know everything about you. you cannot stop me' -charlie burks",
+            "charlie burks, i know you're here",
+            "start with a bed frame made from galvanized square steel. cover it in eco-friendly wood veneer and add soft padding for comfort.",
+            "ladies, gentlemen, and cyborgs",
+            "an element of truth",
+            "hey, vsauce, michael here.",
+            "search youtube for 'eas same headers'",
+            "hurricane tortilla!",
+            "what're those!?",
+            "technoblade never dies!",
+            "who the heck is jimmie?",
+            "peter, no!",
+            "line up everybody, line up, line up, let's go outside!",
+            "what time is it? it's time for lunch!",
+            "do(n't) do your homework",
+            "my homework ate my dog D:",
+            "l+ratio bozo skill issue",
+            "do you suffer from moderate to severe ulcerative colitis?",
+            "from the king to the pen to the ring to the screen :(",
+            "i'm running out of jokes for the splash text",
+            "sit down, wade",
+            "certified loverboy?",
+            "*not me writing these stupid splash texts in the middle of the night*",
+            "the matrix has you, neo",
+            "qwertyuiopasdfghjklzxcvbnm",
+            "a salute to our comrades still in schade's classes",
+            "best in class, both literally and figuratively",
+            "what the FRICK is oatmeal?",
+            "you know what else is massive?",
+            "'up shut thou jaw' -wyatt",
+            "#CringeFest2025",
+            "buttons!",
+            "you're late!! :D",
+            "how to pronounce phoenix:",
+            "what are you on??",
+            "0.5 gpa activities",
+            "flint and steel!",
+            "they want me to fight the chicken?",
+            "water bucket, release!",
+            "please try to enjoy each fact equally.",
+            "why are you a child?",
+            "cave divers are crazy",
+            "6-7",
+            "opensource-ish (i dare you to find this github repo)",
+            "sponsored by nordvpn! use code 'riptide' at checkout",
+            "sponsored by raid shadow legends! use code 'riptide' for 5000 free gems",
+            "powered by html5",
+            "programmed by hamsters",
+            "welcome to lumon",
+            "forklift certified!",
+            "the giant enemy spider!",
+            "what if you 3d printed a 3d printer that prints 3d printers that is being printed by another 3d printed 3d printer?",
+            "trust the process",
+            "you are not him, lil bro",
+            "average discord mod be like:",
+            "</my-sanity>",
+            "the last thing you want in your burger king burger is somebody's foot fungus",
+            "that muffin is looking awfully like a hampster",
+            "i didn't order ratvioli",
+            "i've played these games before!",
+            "9/10 dentists reccommend",
+            "do you even know Nova?",
+            "hi, i'm scott, president of domino's pizza. have you heard of hatsune miku?",
+            "ice bear wants a latte",
+            "why are you running?!",
+            "yessir",
+            "has never went to oovoo javver",
+            "netflix and poptarts",
+            "put on headphones, set volume to the max, and search youtube for 'metal pipe falling'",
+            "side effects may include death",
+            "powered by michaelsoft binbows",
+            "look at this graph...",
+            "applewebkit's default css makes me want to jump off a bridge",
+            "how make proccy??",
+            "there are dozens of us!",
+            "i'm not a rapper",
+            "thanks, jsdelivr!",
+            "welcome back to hell- i mean school",
+            "inconceivable!",
+            "you keep using that word. i don't think it means what you think it means"
+
+        ];
+
+        // Function to set random text in the <p> tag
+        function setRandomText() {
+            const randomIndex = Math.floor(Math.random() * randomStrings.length);
+            document.getElementById("splash").innerHTML = "riptide instance v0.0.1 beta<br><br>" + String(randomStrings[randomIndex]);
+        }
+        // Set random text on page load
+        window.addEventListener('load', setRandomText);
+    </script>
+</body>
+</html>
