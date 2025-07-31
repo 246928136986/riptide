@@ -20,6 +20,10 @@
             padding-top: 10px;
             height: 100vh;
             padding-bottom: 20px;
+            overflow: hidden;
+        }
+        html::-webkit-scrollbar {
+            display: none;
         }
         button {
             color: black;
@@ -40,12 +44,44 @@
         }
         .frame {
             width: calc(100vw - 130px);
-            min-height: calc(100vh - 300px);
+            height: calc(100vh - 300px);
             border: 2px solid #525252;
             background-color: #242424;
             border-radius: 20px;
             padding: 25px;
             margin-bottom: 20px;
+            overflow: scroll;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+ 
+        }
+        @supports (-webkit-touch-callout: none) {
+            .frame {
+                height: calc(100vh - 350px);
+            }
+        }
+        .top {
+            width: 100%;
+            text-align: right;
+            display: flex;
+            position: relative;
+            height: 130px;
+        }
+        
+        @supports (-webkit-touch-callout: none) {
+            .top {
+                height: 110px;
+            }
+        }
+
+        @supports (-webkit-touch-callout: none) {
+            .toph1 {
+                transform: translateY(-20px);
+            }
+        }
+
+        .frame::-webkit-scrollbar {
+            display: none;
         }
         b {
             font-family: "Ubuntu", sans-serif;
@@ -66,10 +102,11 @@
             font-size: 18px;
         }
     </style>
+
 </head>
 <body>
-    <div style="width: 100%; text-align: right; display: flex; position: relative;">
-        <h1 style="text-align: left;">
+    <div id="top" class="top">
+        <h1 style="text-align: left;" id="toph1" class="toph1">
             <svg style="transform: translate(10px,10px);" fill="#FFFFFF" width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#000000" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#000000" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <title></title> <g data-name="Layer 2" id="Layer_2"> <path d="M6.25,14.09A8.78,8.78,0,0,1,8.72,8.71,8,8,0,0,0,16,20h6V18H16A6,6,0,0,1,12.88,6.88,6,6,0,0,0,18,16h4V14H18a4,4,0,0,1-1.64-7.64A4,4,0,0,0,16,8a4,4,0,0,0,4,4h2V10H20a2,2,0,0,1,0-4h2V4H15A10.89,10.89,0,0,0,4.25,13.93,2.27,2.27,0,0,1,2,16v2A4.28,4.28,0,0,0,6.25,14.09Z"></path> </g> </g></svg>            
             riptide<b style="font-size: 25px; margin-left: 10px; color: #797979; font-weight: 700;">beta pre-release</b>
         </h1>
@@ -79,7 +116,6 @@
     <button id="fresh">today's fresh links</button>
     <button id="fun">fun sites</button>
     <button id="pictures">ye olde moving pictures</button>
-    <button id="chatroom">chatroom</button>
     <button id="tools">tools & exploits</button>
     <button id="misc">miscellaneous</button>
     <button id="links">the archives</button>
@@ -183,7 +219,9 @@
             <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">moving pictures</h1>
             <p>
                 free movies, shows, anime, or whatever else. yes, these are "legal" (legal info and disclaimers are at the bottom of the page)
-                <br><br><h3>sources</h3>the following are 
+                <br><br><h3>sources</h3>the following are websites where you can watch said questionably legal content.
+                
+                
                 <br><br><h3>legal info for the nerds 🤓</h3>the streaming of pirated material (simply watching it on a website, like all the sources on this page) is in a legal grey-area under us law. the downloading of this content <i>is</i> explicitly illegal, but when it is streamed, only a max of a few minutes of the content is downloaded to the video cache at any given time. as far as i can tell, there have been no formal cases or rulings in the us against those who stream this content, 
                 as investigative agencies and copyright holders only really care about taking down the actual sites and servers that host this content, since it would be a total nightmare to investigate and prosecute every user of these sites. the fbi has more important things to do than legally pursuing the millions of people that use these sites every day. 
                 i've used them for years without issue. tl;dr, there's no need to worry about the fbi hunting you down, they've got more important things to do.
@@ -191,12 +229,7 @@
             </p>
             `;
         }
-        document.getElementById("chatroom").onclick = function() {pageUpdateChatroom()};
-        function pageUpdateChatroom() {
-            document.getElementById("frame").innerHTML = `
-            <iframe src="https://hack.chat/?riptide710358172409" style="width: calc(100vw - 130px); min-height: calc(100vh - 300px); border: none;"></iframe>
-            `;
-        }
+
 
         document.getElementById("tools").onclick = function() {pageUpdateTools()};
         function pageUpdateTools() {
@@ -233,7 +266,21 @@
         document.getElementById("misc").onclick = function() {pageUpdateMisc()};
         function pageUpdateMisc() {
             document.getElementById("frame").innerHTML = `
-            <p>random stuff</p>
+            <h1 style="margin-bottom: 10px; font-size: 40px; margin-top: 0px;">miscellaneous</h1>
+            <p>
+                all the random stuff that doesn't have its own page
+               <br><h2>credits</h2>
+                site design - me (who the hell else did you think would be here??)<br><br>
+                chatroom - hack.chat<br><br>
+                bookmarklets, tools, etc - various sites, mostly freemediaheckyeah<br><br>
+                fun sites - mostly found through d!ng<br><br>
+                links - all custom made through freedns.afraid.org, the greatest web service ever to be devised by mankind<br><br>
+                hosting - code hosted on github, static site hosted on vercel, dns/subdomains hosted on freedns<br><br>
+                special thanks to applewebkit, firefox, and securly for being total garbage and making me want to die :D<br><br>
+               <br><h2>request/issue report forms</h2>
+                coming soon, dingus
+            </p>
+            
             `;
         }
         document.getElementById("about").onclick = function() {pageUpdateAbout()};
@@ -252,8 +299,6 @@
             <b>fun sites: </b>a bunch of fun, random sites & games to cure boredom
             <br><br>
             <b>moving pictures: </b>movies, shows, anime, etc. no sign-ups, no payment, questional legality.
-            <br><br>
-            <b>chatroom: </b>it's just a chatroom. chat with others on the site
             <br><br>
             <b>tools & exploits: </b>a collection of useful websites, tools, exploits, etc
             <br><br>
@@ -434,7 +479,6 @@
             "skullemojiii!",
             "you call these things chips, instead of krispity crunchy munchy cracker jack snapping nibblers snapping pop westerpool chestershireshire queen's lovely jubbly delice?",
             "ubuntu and lexend are the best fonts. fight me",
-            "pineapple pizza is a creation of the devil. fight me",
             "it's pronounced /ɡɪf/, with a hard g, as in gig. fight me",
             "nondisclosure policy forbids.",
             "all i have is this, and pencil erasers",
@@ -450,8 +494,28 @@
             "what the frick is a kilometer?!",
             "good morning, macrodata refinement!",
             "render not my creation in miniature.",
-            ""
-            
+            "caught in 4K",
+            "thanks vercel!",
+            "ls tech admin, if you're reading this, you need to use a better web filter",
+            "the school district is paying tens of thousands of dollars a year for securly, and it doesn't even work 💔🥀🙏",
+            "'lets block youtube shorts, but lets not block riptide the game & proxy website' -securly, i guess",
+            "if you are reading this, securly failed to block it",
+            "securly is so bad at it's job that i could probably email their support team about this website and it still wouldn't get blocked",
+            "click here",
+            "can i has free robucc???",
+            "me when:",
+            "ahoy there!",
+            "securly is bad at its job",
+            "we all hope ms schade gets fired",
+            "css isn't awesome",
+            "just gotta pray that my garbage css works cross-platform",
+            "the quick brown fox jumps over the lazy dog.",
+            "sybau: stay young, beautiful, and unique ❤️",
+            "congratulations. you have escaped the simulation.",
+            "school: seven cruel hours of our lives",
+            "school won't teach me how to pay taxes or apply for a job, but at least i know the mitochondria is the powerhouse of the cell...",
+            "i hate applewebkit and safari",
+            "i'm gonna burn down the house of whoever decided that the viewport window in safari should extend below the bottom of the screen"
             
 
         ];
