@@ -101,6 +101,10 @@
             color: white;
             font-size: 18px;
         }
+        .greyed {
+            border: 2px solid #464646;
+            color: #464646;
+        }
     </style>
 
 </head>
@@ -115,10 +119,10 @@
     <div class="divider"></div>
     <button id="fresh">today's fresh links</button>
     <button id="fun">fun sites</button>
-    <button id="pictures">ye olde moving pictures</button>
+    <button id="pictures" class="greyed">ye olde moving pictures</button>
     <button id="tools">tools & exploits</button>
     <button id="misc">miscellaneous</button>
-    <button id="links">the archives</button>
+    <button id="links" class="greyed">the archives</button>
     <button id="about">about riptide</button>
 
     <div class="frame" id="frame">
@@ -129,7 +133,7 @@
             <h2>most recent updates:</h2>
             <p>
                 <ul style="list-style-type:disc; font-size: 20px;">
-                    <li>this site is now out for beta release to select people!</li>
+                    <li>this site is now out for beta release to select people! some pages are not done yet (the ones that are greyed out), they will hopefully be done about a week after school starts.</li>
                     <li>uhhh thats kinda it</li>
                     <li>this site was literally just made</li>
                     <li>so there's nothing else to put here</li>
@@ -147,7 +151,10 @@
         document.getElementById("links").onclick = function() {pageUpdateLinks()};
         function pageUpdateLinks() {
             document.getElementById("frame").innerHTML = `
+            <!--
             <p>stuff idk</p>
+                        --!>
+            <p>page under construction. come back soon</p>
             `;
         }
         document.getElementById("fun").onclick = function() {pageUpdateFun()};
@@ -213,9 +220,11 @@
             </p>
             `;
         }
+        
         document.getElementById("pictures").onclick = function() {pageUpdatePictures()};
         function pageUpdatePictures() {
             document.getElementById("frame").innerHTML = `
+            <!--
             <h1 style="margin-bottom: 10px; font-size: 30px; margin-top: 0px;">moving pictures</h1>
             <p>
                 free movies, shows, anime, or whatever else. yes, these are "legal" (legal info and disclaimers are at the bottom of the page)
@@ -227,6 +236,8 @@
                 i've used them for years without issue. tl;dr, there's no need to worry about the fbi hunting you down, they've got more important things to do.
                 <br>as for me (the creator of this site), the sharing of pirated content streams is considered illegal in many juridictions, but is also in a bit of a grey-area, and even huge sites that share sources for this content, such as fmhy.net or /r/piracy have existed for years with very few issues, so there's no need to worry about this site getting taken down.
             </p>
+            --!>
+            <p>page under construction. come back soon</p>
             `;
         }
 
@@ -420,7 +431,6 @@
             "trust the process",
             "you are not him, lil bro",
             "average discord mod be like:",
-            "</my-sanity>",
             "the last thing you want in your burger king burger is somebody's foot fungus",
             "that muffin is looking awfully like a hampster",
             "i didn't order ratvioli",
@@ -496,7 +506,6 @@
             "render not my creation in miniature.",
             "caught in 4K",
             "thanks vercel!",
-            "ls tech admin, if you're reading this, you need to use a better web filter",
             "the school district is paying tens of thousands of dollars a year for securly, and it doesn't even work 💔🥀🙏",
             "'lets block youtube shorts, but lets not block riptide the game & proxy website' -securly, i guess",
             "if you are reading this, securly failed to block it",
