@@ -120,7 +120,7 @@
     <button id="fresh">today's fresh links</button>
     <button id="fun">fun sites</button>
     <button id="pictures" class="greyed">ye olde moving pictures</button>
-    <button id="tools">tools & exploits</button>
+    <button id="tools" class="greyed">tools & exploits</button>
     <button id="misc">miscellaneous</button>
     <button id="links" class="greyed">the archives</button>
     <button id="about">about riptide</button>
@@ -245,6 +245,7 @@
         document.getElementById("tools").onclick = function() {pageUpdateTools()};
         function pageUpdateTools() {
             document.getElementById("frame").innerHTML = `
+            <!--
             <h1 style="margin-bottom: 10px; font-size: 40px; margin-top: 0px;">tools & exploits</h1>
             <p>
                 this is a collection of websites, online tools, chromebook/ipad exploits, etc that are super useful.<br>
@@ -271,7 +272,8 @@
                 </ul>
                 
             </p>
-
+            --!>
+            <p>page under construction. come back soon</p>
             `;
         }
         document.getElementById("misc").onclick = function() {pageUpdateMisc()};
@@ -281,9 +283,9 @@
             <p>
                 all the random stuff that doesn't have its own page
                <br><h2>credits</h2>
-                site design - me (who the hell else did you think would be here??)<br><br>
+                site design - me (who else did you think would be here??)<br><br>
                 chatroom - hack.chat<br><br>
-                bookmarklets, tools, etc - various sites, mostly freemediaheckyeah<br><br>
+                bookmarklets, tools, etc - various sites, including freemediaheckyeah and ttgworld<br><br>
                 fun sites - mostly found through d!ng<br><br>
                 links - all custom made through freedns.afraid.org, the greatest web service ever to be devised by mankind<br><br>
                 hosting - code hosted on github, static site hosted on vercel, dns/subdomains hosted on freedns<br><br>
